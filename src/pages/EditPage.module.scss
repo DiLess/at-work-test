@@ -1,0 +1,116 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  min-height: calc(100vh - 73px);
+
+  .wrpr {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+
+    .sideInfo {
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      border-radius: 16px;
+      width: 360px;
+      background-color: var(--color-06);
+
+      .avatarWrpr {
+        display: flex;
+        width: 100%;
+        height: 485px;
+        border-radius: 8px;
+        overflow: hidden;
+
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .categories {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        > p {
+          padding-bottom: 12px;
+          width: 100%;
+          border-bottom: 1px solid var(--color-04);
+          color: var(--color-03);
+
+          &.title {
+            color: var(--color-01);
+          }
+        }
+      }
+    }
+
+    .body {
+      background-color: var(--color-06);
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      border-radius: 16px;
+      flex: 1;
+
+      .title {
+        width: 100%;
+        padding-bottom: 12px;
+        border-bottom: 1px solid var(--color-04);
+      }
+    }
+  }
+}
+
+.backButton {
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-01);
+  cursor: pointer;
+  padding: 8px 0;
+  margin-bottom: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.notFound {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: #666;
+}
+
+// Мобильная версия
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 16px;
+    min-height: calc(100vh - 57px);
+
+    .wrpr {
+      flex-direction: column;
+      .sideInfo {
+        .avatarWrpr {
+          height: 187px;
+        }
+      }
+
+      .body {
+        padding: 28px;
+      }
+    }
+  }
+}

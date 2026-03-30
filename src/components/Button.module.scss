@@ -1,0 +1,60 @@
+.button {
+  border: none;
+  cursor: pointer;
+  font-weight: var(--font-medium);
+  border-radius: 50px;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  padding: 12px 42px;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.default {
+  background-color: var(--color-01);
+  color: white;
+
+  &:hover {
+    background-color: var(--color-05);
+    color: var(--color-02);
+  }
+}
+
+.primary {
+  background-color: var(--color-06);
+  color: #333;
+  border: 1px solid #ddd;
+
+  &:hover {
+    background-color: #f0f0f0;
+  }
+}
+
+.danger {
+  background-color: #dc3545;
+  color: white;
+
+  &:hover {
+    background-color: #c82333;
+  }
+}
+
+.success {
+  background-color: #28a745;
+  color: white;
+
+  &:hover {
+    background-color: #218838;
+  }
+}

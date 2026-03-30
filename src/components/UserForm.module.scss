@@ -1,0 +1,36 @@
+.form {
+  border-radius: 12px;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.submitButton {
+  width: 100%;
+  margin-top: 24px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+  
+  &:hover {
+    background: #0056b3;
+  }
+}
+
+// Мобильная версия
+@media (max-width: 768px) {
+  
+  button {
+    padding: 10px;
+    margin: auto;
+    width: 100%;
+  }
+}

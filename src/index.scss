@@ -1,0 +1,129 @@
+:root {
+  // Цвета
+  --color-06: #fdfdfd;
+  --color-05: #f4f4f4;
+  --color-04: #dadada;
+  --color-03: #9c9c9c;
+  --color-02: #595959;
+  --color-01: #161616;
+  --accent-color: #22a0bc;
+
+  // Типографика Desktop
+  --font-title: 24px;
+  --font-headline: 20px;
+  --font-text1: 18px;
+  --font-text2: 16px;
+  --font-caption: 14px;
+
+  // Веса шрифтов
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  // Межстрочный интервал
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.4;
+  --line-height-loose: 1.6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    "Manrope",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  background-color: var(--color-bg-secondary);
+  color: #333;
+  line-height: var(--line-height-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Desctop
+
+// Title - Semibold 24
+.title {
+  font-size: var(--font-title);
+  font-weight: var(--font-semibold);
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.01em;
+}
+
+// Headline - Semibold 20
+.headline {
+  font-size: var(--font-headline);
+  font-weight: var(--font-semibold);
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.01em;
+}
+
+// Text1 - Semibold 18
+.text1-semibold {
+  font-size: var(--font-text1);
+  font-weight: var(--font-semibold);
+  line-height: var(--line-height-normal);
+}
+
+// Text1 - Medium 18
+.text1-medium {
+  font-size: var(--font-text1);
+  font-weight: var(--font-medium);
+  line-height: var(--line-height-normal);
+}
+
+// Text2 - Semibold 16
+.text2-semibold {
+  font-size: var(--font-text2);
+  font-weight: var(--font-semibold);
+  line-height: var(--line-height-normal);
+}
+
+// Text2 - Medium 16
+.text2-medium {
+  font-size: var(--font-text2);
+  font-weight: var(--font-medium);
+  line-height: var(--line-height-normal);
+}
+
+// Caption - Regular 14
+.caption {
+  font-size: var(--font-caption);
+  font-weight: var(--font-regular);
+  line-height: var(--line-height-loose);
+}
+
+// Mobile
+@media (max-width: 768px) {
+  :root {
+    --font-title: 24px; // Title1 - Semibold 24
+    --font-headline: 18px; // Headline - Semibold 18
+    --font-text1: 16px; // Text1 Semibold/Medium 16
+    --font-text2: 14px; // Text2 Semibold/Medium 14
+    --font-caption: 10px; // Caption2 - Semibold 10
+  }
+
+  .caption {
+    font-weight: var(--font-semibold);
+  }
+
+  .title,
+  .headline {
+    letter-spacing: -0.005em;
+  }
+}
+
+// Обрезание текста
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

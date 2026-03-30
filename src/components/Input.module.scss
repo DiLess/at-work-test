@@ -1,0 +1,57 @@
+.inputGroup {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-01);
+}
+
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 50px;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  background: white;
+
+  &:focus {
+    outline: none;
+    color: var(--color-02);
+  }
+
+  &.error {
+    border-color: #dc3545;
+  }
+}
+
+.errorMessage {
+  display: block;
+  font-size: 12px;
+  color: #dc3545;
+  margin-top: 6px;
+}
+
+// Мобильная версия
+@media (max-width: 768px) {
+  .inputGroup {
+    margin-bottom: 16px;
+  }
+
+  .label {
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+
+  .input {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+}
